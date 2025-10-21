@@ -11,7 +11,6 @@ public class Bill {
     public float billTotal;
     public int deductionPercentage;
     
-    // Método que usa las clases especializadas para calcular
     public void billTotalCalc() {
         BillCalculator calculator = new BillCalculator();
         calculator.calculateTotals(this);
