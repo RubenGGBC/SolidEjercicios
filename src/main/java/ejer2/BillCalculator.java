@@ -15,7 +15,12 @@ public class BillCalculator {
         bill.totalDeduction = deductionCalculator.calculate(bill.InitialAmount, bill.deductionPercentage);
         
         // Calcular IVA usando la clase especializada
-        bill.totalVAT = vatCalculator.calculate(bill.InitialAmount);
+        if(Integer.parseInt(bill.code)<10) {
+        bill.totalVAT=0;
+        }
+        else {
+            bill.totalVAT = vatCalculator.calculate(bill.InitialAmount);
+        }
         
         // Calcular total final
         bill.billTotal = (bill.InitialAmount - bill.totalDeduction) + bill.totalVAT;
