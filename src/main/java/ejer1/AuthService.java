@@ -1,5 +1,6 @@
 package ejer1;
 
+//Clase sin refactorizar
 public class AuthService {
     public boolean signIn(String service, String log, String pass) { if (service.compareTo("facebook")==0)
         return singInWithFB(log, pass); if (service.compareTo("google")==0)
